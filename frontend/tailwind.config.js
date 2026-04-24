@@ -70,6 +70,8 @@ export default {
         'float': 'float 6s infinite ease-in-out',
         'pulse-soft': 'pulseSoft 3s infinite ease-in-out',
         'gradient-shift': 'gradientShift 8s infinite ease-in-out',
+        'fade-in': 'fadeIn 0.4s ease forwards',
+        'slide-up': 'slideUp 0.4s ease forwards',
       },
       keyframes: {
         shimmer: {
@@ -82,11 +84,19 @@ export default {
         },
         pulseSoft: {
           '0%, 100%': { opacity: '0.4' },
-          '50%': { opacity: '0.8' },
+          '50%': { opacity: '0.9' },
         },
         gradientShift: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
